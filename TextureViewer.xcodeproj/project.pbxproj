@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,15 @@
 		780A7F4026B41FC3001ACA59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A7F3F26B41FC3001ACA59 /* ContentView.swift */; };
 		780A7F4226B41FD1001ACA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780A7F4126B41FD1001ACA59 /* Assets.xcassets */; };
 		780A7F4526B41FD1001ACA59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780A7F4426B41FD1001ACA59 /* Preview Assets.xcassets */; };
+		780A7F4F26B42004001ACA59 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A7F4E26B42004001ACA59 /* MetalView.swift */; };
+		780A7F5226B4202D001ACA59 /* RenderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A7F5126B4202D001ACA59 /* RenderCoordinator.swift */; };
+		780A7F5526B4208C001ACA59 /* BlockRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A7F5426B4208C001ACA59 /* BlockRenderer.swift */; };
+		780A7F5926B42164001ACA59 /* DeltaLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 780A7F5826B42164001ACA59 /* DeltaLogger */; };
+		780A7F5C26B4216E001ACA59 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A7F5B26B4216E001ACA59 /* Logger.swift */; };
+		780A7F5F26B4224E001ACA59 /* Uniforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A7F5E26B4224E001ACA59 /* Uniforms.swift */; };
+		780A7F6226B42320001ACA59 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A7F6126B42320001ACA59 /* Vertex.swift */; };
+		780A7F6526B4247C001ACA59 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 780A7F6426B4247C001ACA59 /* Shaders.metal */; };
+		78F24CF726B42A8F007B0330 /* MatrixUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F24CF626B42A8F007B0330 /* MatrixUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +30,14 @@
 		780A7F4426B41FD1001ACA59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		780A7F4626B41FD1001ACA59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		780A7F4726B41FD1001ACA59 /* TextureViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TextureViewer.entitlements; sourceTree = "<group>"; };
+		780A7F4E26B42004001ACA59 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		780A7F5126B4202D001ACA59 /* RenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderCoordinator.swift; sourceTree = "<group>"; };
+		780A7F5426B4208C001ACA59 /* BlockRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockRenderer.swift; sourceTree = "<group>"; };
+		780A7F5B26B4216E001ACA59 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		780A7F5E26B4224E001ACA59 /* Uniforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uniforms.swift; sourceTree = "<group>"; };
+		780A7F6126B42320001ACA59 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		780A7F6426B4247C001ACA59 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		78F24CF626B42A8F007B0330 /* MatrixUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780A7F5926B42164001ACA59 /* DeltaLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +73,14 @@
 			children = (
 				780A7F3D26B41FC3001ACA59 /* TextureViewerApp.swift */,
 				780A7F3F26B41FC3001ACA59 /* ContentView.swift */,
+				780A7F4E26B42004001ACA59 /* MetalView.swift */,
+				780A7F5126B4202D001ACA59 /* RenderCoordinator.swift */,
+				780A7F5426B4208C001ACA59 /* BlockRenderer.swift */,
+				78F24CF626B42A8F007B0330 /* MatrixUtil.swift */,
+				780A7F6426B4247C001ACA59 /* Shaders.metal */,
+				780A7F6126B42320001ACA59 /* Vertex.swift */,
+				780A7F5E26B4224E001ACA59 /* Uniforms.swift */,
+				780A7F5B26B4216E001ACA59 /* Logger.swift */,
 				780A7F4126B41FD1001ACA59 /* Assets.xcassets */,
 				780A7F4626B41FD1001ACA59 /* Info.plist */,
 				780A7F4726B41FD1001ACA59 /* TextureViewer.entitlements */,
@@ -87,6 +113,9 @@
 			dependencies = (
 			);
 			name = TextureViewer;
+			packageProductDependencies = (
+				780A7F5826B42164001ACA59 /* DeltaLogger */,
+			);
 			productName = TextureViewer;
 			productReference = 780A7F3A26B41FC3001ACA59 /* TextureViewer.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +143,9 @@
 				Base,
 			);
 			mainGroup = 780A7F3126B41FC2001ACA59;
+			packageReferences = (
+				780A7F5726B42164001ACA59 /* XCRemoteSwiftPackageReference "delta-logger" */,
+			);
 			productRefGroup = 780A7F3B26B41FC3001ACA59 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,8 +172,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780A7F4F26B42004001ACA59 /* MetalView.swift in Sources */,
+				780A7F5F26B4224E001ACA59 /* Uniforms.swift in Sources */,
+				780A7F5C26B4216E001ACA59 /* Logger.swift in Sources */,
 				780A7F4026B41FC3001ACA59 /* ContentView.swift in Sources */,
+				780A7F5226B4202D001ACA59 /* RenderCoordinator.swift in Sources */,
+				780A7F6226B42320001ACA59 /* Vertex.swift in Sources */,
+				78F24CF726B42A8F007B0330 /* MatrixUtil.swift in Sources */,
+				780A7F6526B4247C001ACA59 /* Shaders.metal in Sources */,
 				780A7F3E26B41FC3001ACA59 /* TextureViewerApp.swift in Sources */,
+				780A7F5526B4208C001ACA59 /* BlockRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		780A7F5726B42164001ACA59 /* XCRemoteSwiftPackageReference "delta-logger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stackotter/delta-logger";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		780A7F5826B42164001ACA59 /* DeltaLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 780A7F5726B42164001ACA59 /* XCRemoteSwiftPackageReference "delta-logger" */;
+			productName = DeltaLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 780A7F3226B41FC2001ACA59 /* Project object */;
 }

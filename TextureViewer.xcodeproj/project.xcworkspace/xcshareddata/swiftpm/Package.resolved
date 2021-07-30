@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DeltaLogger",
+        "repositoryURL": "https://github.com/stackotter/delta-logger",
+        "state": {
+          "branch": "main",
+          "revision": "a2ffeb3596fd32bf5ff0ad9fda9b610ae7481745",
+          "version": null
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log",
+        "state": {
+          "branch": null,
+          "revision": "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+          "version": "1.4.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

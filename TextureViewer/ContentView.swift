@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  let metalView = MetalView()
+  
+  var body: some View {
+    metalView
+      .toolbar(content: {
+        Button("Another") {
+          metalView.changeTexture()
+        }
+      })
+  }
 }
