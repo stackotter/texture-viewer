@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct TextureViewerApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var contentView = ContentView()
+  var body: some Scene {
+    WindowGroup {
+      contentView.onOpenURL(perform: { url in
+        contentView.metalView.coordinator.setTextureFromURL(
+          url: url, withDevice: MTLCreateSystemDefaultDevice()!
+        )
+      })
     }
+  }
 }

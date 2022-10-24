@@ -39,6 +39,10 @@ public class RenderCoordinator: NSObject, MTKViewDelegate {
     return Float(view.drawableSize.width / view.drawableSize.height)
   }
   
+  public func setTextureFromURL(url: URL, withDevice device: MTLDevice) {
+    texture = try! MTKTextureLoader(device: device).newTexture(URL: url, options: nil)
+  }
+  
   private static func requestNewTexture(withDevice device: MTLDevice) -> MTLTexture {
     let dialog = NSOpenPanel()
     dialog.title = "Choose a texture"
