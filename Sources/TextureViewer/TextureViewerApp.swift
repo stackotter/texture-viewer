@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@main
 struct TextureViewerApp: App {
   var contentView = ContentView()
   var body: some Scene {
