@@ -1,1 +1,0 @@
-TextureViewerApp.main()
