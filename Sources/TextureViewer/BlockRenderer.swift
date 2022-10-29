@@ -13,10 +13,26 @@ struct BlockRenderer {
   
   init(device: MTLDevice) {
     log.info("Loading shaders")
+    
+    let library: MTLLibrary
+    
+    let bundlePath = "Contents/Resources/TextureViewer_TextureViewer.bundle"
     guard
-      let defaultLibrary = device.makeDefaultLibrary(),
-      let vertex = defaultLibrary.makeFunction(name: "vertexShader"),
-      let fragment = defaultLibrary.makeFunction(name: "fragmentShader")
+      let bundle = Bundle(url: Bundle.main.bundleURL.appendingPathComponent(bundlePath)),
+      let libraryURL = bundle.url(forResource: "default", withExtension: "metallib")
+    else {
+      fatalError("Failed to load chunk shaders")
+    }
+    
+    do {
+      library = try device.makeLibrary(URL: libraryURL)
+    } catch {
+      fatalError("Failed to load chunk shaders")
+    }
+    
+    guard
+      let vertex = library.makeFunction(name: "vertexShader"),
+      let fragment = library.makeFunction(name: "fragmentShader")
     else {
       fatalError("Failed to load chunk shaders")
     }

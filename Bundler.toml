@@ -1,0 +1,12 @@
+[apps.TextureViewer]
+product = 'TextureViewer'
+version = '0.1.0'
+minimum_macos_version = "11.0"
+
+[apps.TextureViewer.extra_plist_entries]
+CFBundleShortVersionString = "{VERSION}, commit: {COMMIT_HASH}"
+[[CFBundleDocumentTypes]]
+CFBundleTypeName = 'View File'
+CFBundleTypeRole = 'Viewer'
+CFBundleTypeExtensions = [ 'png' ]
+LSHandlerRank = 'Alternate'
